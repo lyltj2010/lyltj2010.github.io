@@ -2,7 +2,7 @@
 layout: post
 title:  Ranking Metric
 date:   2019-01-02 12:00:00
-category: "algo"
+category: "ltr"
 keywords: ranking,ltr,metric
 ---
 
