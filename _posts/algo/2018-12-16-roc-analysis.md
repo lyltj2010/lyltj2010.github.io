@@ -26,7 +26,7 @@ keywords: ROC, AUC, 评价指标, metric
 + True Positive: 正类被正确分类为正类
 + False Negative: 正类被错误分类为负类
 + True Negative: 负类被正确分类为负类
-+ False Negative: 负类被错误分类为正类
++ False Positive: 负类被错误分类为正类
 
 当有多个样本时候，对上述四种情况汇总，可以得到2x2的[混淆矩阵](https://en.wikipedia.org/wiki/Confusion_matrix)。
 
@@ -72,6 +72,7 @@ keywords: ROC, AUC, 评价指标, metric
 + 虚线l1越往下tp rate越高(好)；虚线l2越往上fp rate越高(坏)
 + l1往下移(好)，多数情况l2也会往下移(坏)；l2往上移(好)，多数情况下l1也会上移(坏)；其方向倾向一致，但一好一坏
 + 总之两个值会互相伤害，需要一个trade off
++ l1和l2会同时移动到最上或最下(样本全预测为正或负)
 
 #### ROC曲线
 
@@ -100,7 +101,7 @@ ROC曲线上有四个坐标点比较特殊：
 + (0,0)所有样本预测为负样本；不会有负样本误判为正样本，假阳率为0；不会有正样本被召回，真阳率为0
 + (1,1)所有样本预测为正样本；所有负样本都误判为正样本，假阳率为1；所有正样本都被召回，真阳率为1
 + (0,1)完美分类器；没有负样本被误判为正样本，假阳率为0；所有正样本都被召回，真阳率为1
-+ (1,0)颠倒分类器；所有负样本均误判为正样本，假阳率为1；所有正样本未被召回，真阳率为
++ (1,0)颠倒分类器；所有负样本均误判为正样本，假阳率为1；所有正样本未被召回，真阳率为0
 
 大体上将，越接近左上角(0,1)，分类器性越倾向于好。一个非正式解释就是
 
@@ -127,7 +128,7 @@ ROC曲线上有四个坐标点比较特殊：
 
 + 如果得分校准过，能很好地表示概率，则可直接卡阈值判断正负，accuracy等指标较好
 + 如果不能很好表示概率，卡0.5阈值就会出现论文中Fig.4的矛盾，AUC=1但正确率确只有80%
-+ 得分能否能表示概率这一区分挺重要
++ 得分能否表示概率这一区分挺重要
 
 > An important point about ROC graphs is that they measure the ability of a classiﬁer to produce good relative instance scores... The ROC curve shows the ability of the classiﬁer to rank the positive instances relative to the negative instances, and it is indeed perfect in this ability.
 
