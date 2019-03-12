@@ -8,11 +8,11 @@ keywords: loss function,machine learning
 
 损失函数(Loss Function)用来估量模型的预测值 $\hat y = f(x)$ 与真实值 $y$ 的不一致程度。这里做一个简单梳理，以备忘。
 
-## 回归问题
+# 回归问题
 
 常见的回归问题损失函数有绝对值损失、平方损失、Huber损失。
 
-#### 绝对值损失
+### 绝对值损失
 
 又叫做L1损失。
 
@@ -22,7 +22,7 @@ $$MAE = \frac{1}{n} \sum_{i=1}^{n} |y - \hat y|$$
 
 MAE一个问题是在 $y - \hat y=0$ 处不可导，优化比较困难。
 
-#### 平方损失
+### 平方损失
 
 又称为L2损失。
 
@@ -32,7 +32,7 @@ $$MSE = \frac{1}{n} \sum_{i=1}^{n}(\hat y - y)^2$$
 
 MSE一个问题是对异常点敏感，由于平方的存在，会放大对异常点的关注。
 
-#### Huber损失
+### Huber损失
 
 相当于是L1和L2损失的一个结合。
 
@@ -50,7 +50,7 @@ Huber损失是对上述两者的综合，当 $\mid y-\hat y\mid$小于指定的�
 ![algo-huber-loss](https://images-1256734305.cos.ap-beijing.myqcloud.com/algo-huber-loss.png)
 
 
-## 分类问题
+# 分类问题
 
 一般来说，二分类机器学习模型输出有两个部分：线性输出$s$和非线性输出$g(s)$。其中，线性输出score一般是
 
@@ -68,7 +68,7 @@ $$g(s) = \frac{1}{1 + e^{-s}}$$
 
 这样，$ys$和回归模型中残差$s - y$非常类似，以$ys$为自变量作图，方便理解。
 
-#### 0-1 Loss
+### 0-1 Loss
 
 0-1 Loss很直观，如果误分类则误差为1，否则为0。
 
@@ -86,7 +86,7 @@ $$
 
 所以实际模型中0-1 Loss用的很少，后续介绍的误差，多数可看做0-1 Loss的一个上界。
 
-#### Cross Entropy Loss
+### Cross Entropy Loss
 
 Cross Entropy Loss是非常重要的损失函数，也是应用最多的分类损失函数之一。根据label的表示方式，一般有两种常见形式。
 
@@ -134,7 +134,7 @@ $$L(y, \hat y) = log(1 + e^{-ys})$$
 
 交叉熵损失在实数域内，Loss近似线性变化。尤其是当 ys << 0 的时候，Loss 更近似线性。这样，模型受异常点的干扰就较小。 而且交叉熵 Loss 连续可导，便于求导计算，应用比较广泛。
 
-#### Hinge Loss
+### Hinge Loss
 
 > The hinge loss is used for maximum-margin classification, most notably for support vector machines (SVMs).
 
@@ -144,13 +144,13 @@ Hinge Loss名字很象形，其形状类似合页。一般用于SVM中，体现S
 
 ![algo-hinge-loss](https://images-1256734305.cos.ap-beijing.myqcloud.com/algo-hinge-loss.png)
 
-#### Exponential Loss
+### Exponential Loss
 
 指数损失，多用于AdaBoost中，其它算法中用的较少。
 
 $$L(y, s) = e^{-ys}$$
 
-#### Modified Huber Loss
+### Modified Huber Loss
 
 Huber Loss整合MAE和MSE的优点，稍作改进，同样可用于分类问题，称为Modified Huber Loss。
 
@@ -167,7 +167,7 @@ $$
 + $[-1, 1]$二次
 + $[1, Inf]$常数0
 
-#### 分类问题损失函数对比
+### 分类问题损失函数对比
 
 对比不同损失函数随ys的变化趋势。有一点值得注意，就是各个损失函数在$ys$很小时，损失一般不超过线性（指数损失除外），否则对异常值太敏感。
 
