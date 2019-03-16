@@ -18,7 +18,7 @@ $$f(x) = P(+1|x) \in [0,1]$$
 
 ![ml-foundations-soft-binary-classification](https://images-1256734305.cos.ap-beijing.myqcloud.com/ml-foundations-soft-binary-classification.png)
 
-摘自摘自教材《Learing From Data》
+摘自教材《Learing From Data》
 
 Formally, we are trying to learn the target function
 
@@ -131,9 +131,6 @@ $$tanh(s)=\frac{e^s-e^{-s}}{e^s+e^{-s}}$$
 两个概率分布$\{p,1-p\}$以及$\{q,1-q\}$，其交叉熵为：
 
 $$plog(\frac{1}{q}) + (1-p)log(\frac{1}{1-q})$$
-
-
-e
 
 
 
