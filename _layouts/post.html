@@ -1,7 +1,7 @@
 ---
 layout: default
 comment: true
-keywords: Data Science, Python, Machine Learning
+keywords: Data Science, Machine Learning, Recommendation System, Deep Learning
 ---
 <div class="article article-post">
     <h2 class="title">{{ page.title }}</h2>
@@ -20,12 +20,24 @@ keywords: Data Science, Python, Machine Learning
         <a class="next" href="{{ page.next.url }}" rel="bookmark">{{ page.next.title | truncatewords:5 }}&nbsp;&raquo;</a>
         {% endif %}
     </nav>
-    <div class="comment">
-        {% if site.disqus.config %}
-        <div id="disqus_thread"></div>
-        {% endif %}
-        {% if site.duoshuo.config %}
-        <div class="ds-thread" data-thread-key="{{ page.title }}"></div>
-        {% endif %}
-    </div>
+
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function () {
+            this.page.url = PAGE_URL;
+            this.page.identifier = "{{ page.url }}"
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://yongle-site.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+
+
+
+
+
