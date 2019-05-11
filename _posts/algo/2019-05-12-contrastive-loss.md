@@ -23,6 +23,8 @@ $$L=\frac{1}{2 N} \sum_{n=1}^{N} y d^{2}+(1-y) \max (\operatorname{margin}-d, 0)
 
 ![algo-contrasive-loss](https://images-1256734305.cos.ap-beijing.myqcloud.com/algo-contrasive-loss.png)
 
+基于距离的Loss可以借鉴该思路，比如DSSM中，有了query和doc的embedding向量，是否可构造contrasive loss训练，使query和相关doc距离更近，和不相关query距离更远？
+
 ### Ref
 
 + [Dimensionality Reduction by Learning an Invariant Mapping](http://yann.lecun.com/exdb/publis/pdf/hadsell-chopra-lecun-06.pdf)
