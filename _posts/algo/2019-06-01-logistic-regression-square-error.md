@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  逻辑回归为何不用平方误差
-date:   2019-06-31 12:00:00
+date:   2019-06-01 12:00:00
 category: "algo"
 keywords: logistic regression, square error, cross entropy
 ---
@@ -36,7 +36,7 @@ $$\frac{\partial\hat y}{\partial z}=\sigma'(z)=\sigma(z)(1-\sigma(z))=\hat y(1-\
 + 当$y=0$, 若$\hat y$趋于1(far from target),梯度趋近于0，不合理
 + 当$y=0$, 若$\hat y$趋于0(close to target),梯度趋于0，合理
 
-即当误差比较大的时候，梯度值反而可能很小，导致难以收敛。如下图所示，当参数值里解位置较远时，平方误差其函数值比较平坦，梯度基本为0，导致学习非常缓慢，而交叉熵原理解的位置，梯度较大。从学习速率角度看，交叉熵损失比平方损失更适合逻辑回归。
+即当误差较大时，梯度值反而可能很小，导致难以收敛。如下图所示，当参数值离解位置较远时，平方误差其函数值比较平坦，梯度基本为0，导致学习非常缓慢，而交叉熵离解较远的位置，梯度较大。从学习速率角度看，交叉熵损失比平方损失更适合逻辑回归。
 
 ![algo-logistic-regression-square-error-cross-entropy-square-error](https://images-1256734305.cos.ap-beijing.myqcloud.com/algo-logistic-regression-square-error-cross-entropy-square-error.png)
 
