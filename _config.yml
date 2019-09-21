@@ -62,9 +62,10 @@ author:
     name: lyuyongle
     email: lyuyongle@gmail.com
     imageLink: /images/header.jpeg
+    qrCodeLink: /images/qr-code.png
     simpleIntro: 米乐乐果<br>2019 全局、逻辑、目标。<br>2018 耐心
     detailIntro:
-      <p>筚路蓝缕，以启山林。</p>
+      <p>守正出奇</p>
 
 # Pick icon at http://fortawesome.github.io/Font-Awesome/icons/#brand
 follow:
