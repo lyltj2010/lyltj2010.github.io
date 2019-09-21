@@ -62,8 +62,7 @@ keywords: 认知模型, 工作记忆, 刻意练习, 学习方法
 
 ![book-why-dont-students-like-school-summary](https://images-1256734305.cos.ap-beijing.myqcloud.com/book-why-dont-students-like-school-summary.png)
 
+更多文章，欢迎关注公众号。
 
-
-
-
+![qr-code](https://images-1256734305.cos.ap-beijing.myqcloud.com/qr-code.png)
 
