@@ -39,7 +39,7 @@ timezone:      null
 
 
 # Site config
-title: yongle
+title: ~~~
 # description:
 # keywords:
 # url:
@@ -60,10 +60,10 @@ nav:
 # Author config
 author:
     name: lyuyongle
-    email: lyuyongle@gmail.com
+    email: lyuyongle at gmail.com
     imageLink: /images/header.jpeg
     qrCodeLink: /images/qr-code.png
-    simpleIntro: 米乐乐果<br>2019 全局、逻辑、目标。<br>2018 耐心
+    simpleIntro: 耐心~
     detailIntro:
       <p>守正出奇</p>
 
@@ -72,23 +72,21 @@ follow:
   - class: icon-rss
     url: /atom.xml
   - class: icon-weibo
-    url: http://weibo.com/
+    url: #
   - class: icon-facebook
-    url: https://www.facebook.com/yongle.lyu.9
+    url: #
   - class: icon-github-alt
-    url: https://github.com/lyltj2010
+    url: #
   - class: icon-twitter
-    url: https://twitter.com/lvyongle
+    url: #
   - class: icon-google-plus
-    url: https://plus.google.com/u/0/100808276953752695030
+    url: #
 
 #Links
 customLinks:
   - item:
-    - text: 阳志平
-      url: http://www.yangzhiping.com/
-    - text: 肖凯老师
-      url: http://xccds1977.blogspot.jp/
+    - text: ~~~
+      url: #
     message: Friends
 
 # googleAnaly
